@@ -36,8 +36,8 @@ for epoch in range(30):
     model.train()
     for batch, _ in train_loader:
         batch = batch.to(device)
-        x = transform(batch)
-        x1 = transform1(batch)
+        x = t(batch)
+        x1 = t1(batch)
         fx = model(x)
         fx1 = model(x1)
         loss = criterion(fx, fx1)
